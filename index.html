@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script defer src="cell.js"></script>
+    <script defer src="background.js"></script>
+    <script defer src="play.js"></script>
+</head>
+
+<body>
+    <div id="header">Find Your Way Through The Maze!</div>
+    <div id="main">
+        <div id="gameHolder">
+            <div id="title">
+                <span id="colsShow">cols</span> X <span id="rowsShow">rows</span>
+            </div>
+            <canvas id="canvas"></canvas>
+        </div>
+        <div id="holder">
+            <div id="inputData">
+                <div class="smallHolder"><span>Speed </span><input id="speed" type="range" min="1" max="100" value="10"></div>
+                <div class="smallHolder"><span>Rows </span><input id="rows" type="range" min="4" max="40" value="20"></div>
+                <div class="smallHolder"><span>Colums </span><input id="cols" type="range" min="4" max="40" value="20"></div>
+                <div id="newHolder"><button id="new" onclick="start()">New</button></div>
+            </div>
+            <div id="outputData">
+                <div><span>Minimum Steps needed </span><span id="minSteps" style="color: white; font-size: 30px;"></span></div>
+                <div><span>Steps taken </span><span id="stepsTaken" style="color: white; font-size: 30px;"></span></div>
+
+            </div>
+        </div>
+
+</body>
+<canvas id="background"></canvas>
+
+</html>
